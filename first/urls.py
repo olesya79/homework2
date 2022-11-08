@@ -15,17 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from seasons.views import season
-from seasons.views import winter
-from seasons.views import autumn
-from seasons.views import summer
-from seasons.views import spring
+from seasons.views import months
+# from seasons.views import season
+# from seasons.views import winter
+# from seasons.views import autumn
+# from seasons.views import summer
+# from seasons.views import spring
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('season/', season),
-    path('season/winter', winter),
-    path('season/autumn', autumn),
-    path('season/summer', summer),
-    path('season/spring', spring),
+    path('<months>', months)
+    # path('<seasons>', index)
+    # path('season/', season),
+    # path('season/winter', winter),
+    # path('season/autumn', autumn),
+    # path('season/summer', summer),
+    # path('season/spring', spring),
 ]
